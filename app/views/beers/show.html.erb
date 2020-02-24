@@ -1,2 +1,13 @@
-<h1>Beers#show</h1>
-<p>Find me in app/views/beers/show.html.erb</p>
+<%= link_to "home", root_path %>
+<%= image_tag(@photo, :alt => "beer") %>
+<h1><%= @beer.name %></h1>
+<h4>Origin</h4>
+<p><%= @beer.location %></p>
+<h4>Category</h4>
+<p><%= @beer.category %></p>
+<h4>Type</h4>
+<p><%= @beer.beer_type %></p>
+<h4>Description</h4>
+<p><%= @beer.description %></p>
+<h4>Degree</h4>
+<p><%= @beer.degree %> %</p>
