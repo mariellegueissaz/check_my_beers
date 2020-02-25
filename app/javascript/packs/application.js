@@ -16,8 +16,13 @@ ScanditSDK.BarcodePicker.create(document.getElementById("scandit-barcode-picker"
   });
   barcodePicker.applyScanSettings(scanSettings);
   barcodePicker.onScan(function(scanResult) {
-    alert(scanResult.barcodes.reduce(function(string, barcode) {
-      return string + ScanditSDK.Barcode.Symbology.toHumanizedName(barcode.symbology) + ": " + barcode.data + "\n";
-    }, ""));
+    scanResult.barcodes.reduce(function(string, barcode) {
+      fetch(`http://localhost:3000/find_beer_from_scan?code=5411656010711`)
+      .then(response => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+      // document.querySelector('.results').innerHTML = barcode.data;
+    }, "");
   });
 });
