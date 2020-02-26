@@ -1,7 +1,18 @@
+require 'csv'
+
 class Beer < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_one_attached :photo
-  LOCATION = [["Allemagne", "Allemagne"], ["Suisse", "Suisse"], ["France", "France"], ["Italie", "Italie"], ["Portugal", "Portugal"], ["Belgique", "Belgique"], ["Pays-Bas", "Pays-Bas"], ["Republique tchèque", "Republique tchèque"], ["Espagne", "Espagne"], ["Mexique", "Mexique"], ["Irlande", "Irlande"], ["Chine", "Chine"], ["Japon", "Japon"], ["Etats-Unis", "Etats-Unis"], ["Danemark", "Danemark"], ["Royaume-Uni", "Royaume-Uni"], ["Canada", "Canada"], ["Norvège", "Norvège"], ["Autriche", "Autriche"]]
-  CATEGORIES = [["Bière blanche", "Bière blanche"], ["Bière blonde", "Bière blonde"], ["Bière brune", "Bière brune"], ["Bière noire", "Bière noire"], ["Bière ambrée", "Bière ambrée"], ["Bière aromatisée", "Bière aromatisée"], ["Bière de Noël", "Bière de Noël"]]
-  MAIN = [["Wheat Beer", "Wheat Beer"], ["Lager", "Lager"], ["IPA", "IPA"], ["American Pale Ale", "American Pale Ale"], ["Porter", "Porter"], ["Stout", "Stout"], ["Pale Ale", "Pale Ale"], ["Brown Ale", "Brown Ale"], ["Strong Golden Ale", "Strong Golden Ale"], ["Strong Dark Ale", "Strong Dark Ale"], ["Triple", "Triple"], ["Red Ale", "Red Ale"], ["American Amber", "American Amber"], ["English Bitter", "English Bitter"], ["Ale ambrée", "Ale ambrée"], ["Winter Ale", "Winter Ale"], ["Ale", "Ale"], ["Pale Flavours", "Pale Flavours"], ["Mild Ale", "Mild Ale"]]
+  csv_options = {col_sep: ';', quote_char: '|', headers: :first_row }
+  filepath    = 'app/assets/csv/beers.csv'
+  LOCATION = []
+  CATEGORIES = []
+  MAIN = []
+  BREWERY = []
+  CSV.foreach(filepath, csv_options) do |row|
+  LOCATION << row['manufacturing_places']
+  CATEGORIES << row['categories']
+  MAIN << row['main_category']
+  BREWERY << row['brands']
+end
 end
