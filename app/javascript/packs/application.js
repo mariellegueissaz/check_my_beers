@@ -20,7 +20,7 @@ ScanditSDK.BarcodePicker.create(document.getElementById("scandit-barcode-picker"
       fetch(`http://localhost:3000/find_beer_from_scan?code=5411656010711`)
       .then(response => response.json())
       .then((data) => {
-        console.log(data);
+        window.location.href = `http://localhost:3000/beers/${data.id}`;
       });
       // document.querySelector('.results').innerHTML = barcode.data;
     }, "");

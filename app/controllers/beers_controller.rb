@@ -22,10 +22,7 @@ class BeersController < ApplicationController
       return "no beer"
     else
       @beer = Beer.find_by(barcode: @barcode)
-      respond_to do |format|
-        format.js {render json: @beer.as_json}
-      end
-      # return @beer.product_name
+      render json: @beer.as_json(only: [:id])
     end
   end
 
