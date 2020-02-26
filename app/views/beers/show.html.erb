@@ -28,3 +28,26 @@
   </div>
 </div>
 
+<%= link_to "Add a Review", new_beer_review_path(@beer)  %>
+
+
+<% unless @beer.reviews.count == 0 %>
+  <h6>Reviews</h6>
+  <div class="reviews-cards">
+      <% @beer.reviews.each do |review| %>
+        <div class="review">
+          <div class="author">
+            <p><i class="fas fa-user"></i> <%= review.user.email %></p>
+          </div>
+          <div class="flex">
+            <div class="review-text">
+              <p><%= review.content %></p>
+            </div>
+            <div class="rate">
+              <p><%= review.rate %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+<% end %>
