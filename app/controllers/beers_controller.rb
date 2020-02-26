@@ -43,7 +43,11 @@ class BeersController < ApplicationController
     @reviews.each do |review|
     sum = sum + review.rate
     end
+    if @reviews.count == 0
+      @beer_rate = 1
+    else
     @beer_rate = sum / @reviews.count
+  end
   end
 
 end
