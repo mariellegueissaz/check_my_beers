@@ -1,1 +1,82 @@
-// Specific CSS for your home-page
+///////////// MAIN CSS
+
+body {
+  background-color: $white;
+}
+
+
+.main-container {
+  min-width: 520px;
+//   // display: flex;
+//   // flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $warm-yellow;
+  font-size: 25px;
+  &:hover {
+    color: $warm-yellow;
+  }
+}
+
+h1 {
+  color: $warm-yellow;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: $playfair;
+  color: $white;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
+
+//////////
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(255, 255, 255, 0.2)),
+    url('https://source.unsplash.com/collection/762765');
+  background-size: cover;
+  // justify-content: center;
+  // align-items: center;
+}
+
+// .content {
+//   // min-height: 100vh;
+// }
+
+.header {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 80px;
+  i {
+    margin: 0 13px;
+  }
+}
+
+.home-nav {
+  justify-content: center;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+.big-btn {
+  max-width: 200px;
+  padding: 30px;
+  background-color: $warm-yellow;
+  border-radius: 10px;
+  margin: 2px 10px;
+  text-align: center;
+  a {
+    color: $white;
+  }
+  i {
+    font-size: 40px;
+  }
+}
