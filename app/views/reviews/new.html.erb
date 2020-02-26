@@ -1,2 +1,11 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="form-container">
+  <h1>Your review</h1>
+  <div class="form-box">
+    <%= simple_form_for([ @beer, @review ]) do |f| -%>
+      <%= f.input :content %>
+      <%= f.input :rate, collection: Review::STARS %>
+  </div>
+      <%= f.submit class: "bookme-btn" %>
+    <% end -%>
+</div>
+
