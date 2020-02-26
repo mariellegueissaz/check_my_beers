@@ -1,0 +1,17 @@
+.banner-product {
+  position: relative;
+}
+
+.banner-product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.banner-product h3 {
+  position: absolute;
+  color: $white;
+  bottom: 10px;
+  left: 30px;
+  font-size: 26px;
+}

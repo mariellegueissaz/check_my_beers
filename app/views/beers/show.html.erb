@@ -1,13 +1,30 @@
-<%= link_to "home", root_path %>
-<%= image_tag(@photo, :alt => "beer") %>
-<h1><%= @beer.name %></h1>
-<h4>Origin</h4>
-<p><%= @beer.location %></p>
-<h4>Category</h4>
-<p><%= @beer.category %></p>
-<h4>Type</h4>
-<p><%= @beer.beer_type %></p>
-<h4>Description</h4>
-<p><%= @beer.description %></p>
-<h4>Degree</h4>
-<p><%= @beer.degree %> %</p>
+<div class="banner-product">
+  <h3><%= @beer.name %></h3>
+  <%= image_tag(@photo, :alt => "beer") %>
+</div>
+<div class="container">
+  <div class="card-details-product">
+    <h5>Description</h5>
+    <p><%= @beer.description %></p>
+  </div>
+  <div class="card-details-product">
+    <div class="flex">
+      <div class="detail-product">
+        <h4><i class="fas fa-home"></i> Origin</h4>
+        <p><%= @beer.location %></p>
+      </div>
+      <div class="detail-product">
+        <h4><i class="fab fa-pagelines"></i> Category</h4>
+        <p><%= @beer.category %></p>
+      </div>
+      <div class="detail-product">
+        <h4><i class="fas fa-glass-whiskey"></i> Type</h4>
+        <p><%= @beer.beer_type %></p>
+      </div>
+      <div class="detail-product">
+        <h4><i class="fas fa-percent"></i> Degree</h4>
+        <p><%= @beer.degree %> %</p>
+      </div>
+  </div>
+</div>
+
