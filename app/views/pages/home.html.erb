@@ -1,3 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<div id="scandit-barcode-picker" style="max-width: 1280px; max-height: 80%;"></div>
+<div class="home-container col-12">
+  <div class="content">
+    <div class="header row">
+      <h1 class="col-sm-12 col-lg-8">Check </br> my beers</h1>
+      <h2 class="col-sm-12 col-lg-8"><i class="fas fa-grip-lines"></i> Choose the right beer <i class="fas fa-grip-lines"></i></h2>
+    </div>
+
+    <div class="home-nav row col-sm-12">
+      <div class="big-btn col-3">
+        <%= link_to beers_path do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      </div>
+      <div class="big-btn col-3">
+        <%= link_to scan_path do %>
+          <i class="fas fa-barcode"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
