@@ -1,12 +1,28 @@
-<h1>Beeeeeeeers</h1>
+<div class="container">
+  <h3>Toutes les bières</h3>
+
   <% @beers.each do |beer| %>
+    <div class="beer-card">
+
         <% if beer.photo.attached? %>
         <%= cl_image_tag beer.photo, :alt => "beer" %>
         <% else %>
-        <%= image_tag("https://static.mycity.travel/manage/uploads/7/40/117655/1/biere_3000.jpg", :alt => "beer") %>
+        <%= image_tag "default-picture.jpg" %>
         <% end %>
-      <h2><%= beer.name %></h2>
-      <p><%= beer.beer_type %></p>
-      <p><%= beer.category %></p>
-        <%= link_to "More Info", beer_path(beer.id) %>
+
+      <div class="card-beer-infos">
+        <div class="main-infos">
+          <h4><%= beer.name %></h4>
+          <p class="brewery"><%= beer.brewery %></p>
+          <p><%= beer.category %></p>
+        </div>
+
+        <div class="second-infos">
+          <div class="rate-info"><i class="fas fa-beer"></i> <i class="fas fa-beer"></i> <i class="fas fa-beer"></i> <i class="fas fa-beer"></i> <i class="fas fa-beer"></i></div>
+          <%= link_to "Details", beer_path(beer.id), class: "btn-medium" %>
+        </div>
+      </div>
+    </div>
   <% end %>
+</div>
+
