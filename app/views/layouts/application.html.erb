@@ -10,12 +10,14 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-
-    <%= javascript_pack_tag 'application' %>
-    <script src="https://unpkg.com/scandit-sdk@4.x"></script>
+    <div class="main-container">
+        <%= render 'shared/navbar' %>
+        <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= javascript_include_tag 'application' %>
+        <%= javascript_pack_tag 'application' %>
+        <script src="https://unpkg.com/scandit-sdk@4.x"></script>
+    </div>
   </body>
 </html>
