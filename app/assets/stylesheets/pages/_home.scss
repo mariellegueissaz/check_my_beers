@@ -50,16 +50,23 @@ h4 {
   font-size: 20px;
 }
 
+h5 {
+  font-family: $playfair;
+  font-weight: 700;
+  font-style: italic;
+  color: $warm-yellow;
+  font-size: 28px;
+}
+
 p {
   color: $mydark;
 }
 
 .container {
-  margin-top: 50px;
   padding: 0;
 }
 
-//////////
+//////////////////////////////////////////////////////////////
 
 .home-container {
   display: flex;
