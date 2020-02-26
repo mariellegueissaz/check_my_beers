@@ -1,14 +1,54 @@
-.navbar {
-  height: 60px;
-  background-color: $mydark;
-}
+// .navbar {
+//   justify-content: space-between;
+//   height: 60px;
+//   background-color: $mydark;
+// }
 
 .navbar-brand img {
   width: 35px;
   height: 35px;
 }
 
-.right-nav i {
-  color: $white;
-  font-size: 28px;
+// .right-nav {
+//   display: flex;
+// }
+
+// .right-nav i {
+//   color: $white;
+//   font-size: 28px;
+// }
+
+// .navbar .navbar-collapse {
+//   flex-grow: 0;
+// }
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: $mydark;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+color: white;
+}
+
+.dropdown-menu-right {
+  background-color: transparent;
+  border-style: none;
+}
+
+.dropdown-menu-right a {
+  color:white;
+  &:hover {
+    background-color: transparent;
+    color: #dddddd;
+    transform: translate(-10px);
+  }
 }
