@@ -15,4 +15,15 @@ class BeersController < ApplicationController
   def scan
 
   end
+
+  def find_beer_from_scan
+    @barcode = params[:code]
+
+      @beer = Beer.find_by(barcode: @barcode)
+      render json: @beer.as_json(only: [:id])
+
+
+
+  end
+
 end
