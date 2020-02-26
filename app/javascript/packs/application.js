@@ -16,8 +16,17 @@ ScanditSDK.BarcodePicker.create(document.getElementById("scandit-barcode-picker"
   });
   barcodePicker.applyScanSettings(scanSettings);
   barcodePicker.onScan(function(scanResult) {
-    alert(scanResult.barcodes.reduce(function(string, barcode) {
-      return string + ScanditSDK.Barcode.Symbology.toHumanizedName(barcode.symbology) + ": " + barcode.data + "\n";
-    }, ""));
+    scanResult.barcodes.reduce(function(string, barcode) {
+      fetch(`http://localhost:3000/find_beer_from_scan?code=${barcode.data}`)
+      .then(response => response.json())
+      .then((data) => {
+        if (data === null) {
+          console.log(data)
+          alert("No beer found");
+        } else {
+          window.location.href = `http://localhost:3000/beers/${data.id}`;
+        }
+      });
+    }, "");
   });
 });
