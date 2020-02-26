@@ -21,7 +21,7 @@ class BeersController < ApplicationController
      if @beer.photo.attached?
       @photo = @beer.photo
     else
-      @photo = "https://static.mycity.travel/manage/uploads/7/40/117655/1/biere_3000.jpg"
+      @photo = "default-picture.jpg"
     end
   end
 

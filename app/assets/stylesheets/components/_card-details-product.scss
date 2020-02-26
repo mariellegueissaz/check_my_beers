@@ -1,0 +1,23 @@
+.card-details-product {
+  background-color: $mydark;
+  padding: 20px;
+  margin-bottom: 10px;
+  p {
+    color: $white;
+  }
+  h4 {
+    color: $warm-yellow;
+    font-weight: 400;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .detail-product {
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
