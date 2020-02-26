@@ -1,12 +1,32 @@
-<h1>Beeeeeeeers</h1>
-  <% @beers.each do |beer| %>
-        <% if beer.photo.attached? %>
-        <%= cl_image_tag beer.photo, :alt => "beer" %>
-        <% else %>
-        <%= image_tag("https://static.mycity.travel/manage/uploads/7/40/117655/1/biere_3000.jpg", :alt => "beer") %>
-        <% end %>
-      <h2><%= beer.name %></h2>
-      <p><%= beer.beer_type %></p>
-      <p><%= beer.category %></p>
-        <%= link_to "More Info", beer_path(beer.id) %>
+<h1>Check my Beers</h1>
+  <%= form_tag beers_path, method: :get do %>
+  <%= text_field_tag :name,
+    params[:name],
+    class: "form-control",
+    placeholder: "Enter a beer name"%>
+      <%= submit_tag "Search", class: "search-btn" %>
   <% end %>
+
+  <h2>Advanced Search</h2>
+    <%= form_tag beers_path, method: :get do %>
+    <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type"%>
+    <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
+    <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
+    <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
+    <%= number_field_tag 'price', nil, within: 1...10 %>
+    <%= submit_tag "Search", class: "search-btn" %>
+  <% end %>
+
+
+
+<% @beers.each do |beer| %>
+  <% if beer.photo.attached? %>
+    <%= cl_image_tag beer.photo, :alt => "beer" %>
+  <% else %>
+    <%= image_tag("https://static.mycity.travel/manage/uploads/7/40/117655/1/biere_3000.jpg", :alt => "beer") %>
+  <% end %>
+  <h2><%= beer.name %></h2>
+  <p><%= beer.beer_type %></p>
+  <p><%= beer.category %></p>
+<%= link_to "More Info", beer_path(beer.id) %>
+<% end %>
