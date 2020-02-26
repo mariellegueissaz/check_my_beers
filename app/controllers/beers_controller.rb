@@ -18,12 +18,12 @@ class BeersController < ApplicationController
 
   def find_beer_from_scan
     @barcode = params[:code]
-    if Beer.find_by(barcode: @barcode).nil?
-      return "no beer"
-    else
+
       @beer = Beer.find_by(barcode: @barcode)
       render json: @beer.as_json(only: [:id])
-    end
+
+
+
   end
 
 end
