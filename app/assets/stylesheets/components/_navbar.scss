@@ -4,9 +4,14 @@
 //   background-color: $mydark;
 // }
 
+.navbar {
+  display: flex;
+  grid-row: 1;
+  grid-column: 1 / 5;
+}
+
 .navbar-brand img {
-  width: 35px;
-  height: 35px;
+  width: 40px;
 }
 
 // .right-nav {
