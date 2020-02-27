@@ -2,7 +2,7 @@
           <% if favorite.beer.photo.attached? %>
             <%= image_tag(favorite.beer.photo, :alt => "beer") %>
           <% else %>
-            <%= image_tag("beer_logo.png", :alt => "beer") %>
+            <%= image_tag("default-picture.jpg", :alt => "beer") %>
           <% end %>
   <h3><%= favorite.beer.name %> <%= favorite.beer.brewery %></h3>
   <p><%= favorite.beer.location %></p>
