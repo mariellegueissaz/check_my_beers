@@ -1,6 +1,10 @@
 class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.all.where(user: current_user)
+    @beers_recommended = Beer.all.sample(5)
+      while @beers_recommended.include?(@favorites)
+        @beers_recommended = Beer.all.sample(5)
+      end
   end
 
   def create
