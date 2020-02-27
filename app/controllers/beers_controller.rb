@@ -18,7 +18,8 @@ class BeersController < ApplicationController
 
   def show
     @beer = Beer.find(params[:id])
-     if @beer.photo.attached?
+    @marker = [ { lat: @beer.latitude, lng: @beer.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: @beer }), image_url: helpers.asset_url('beer_pin.png') } ]
+    if @beer.photo.attached?
       @photo = @beer.photo
     else
       @photo = "default-picture.jpg"
