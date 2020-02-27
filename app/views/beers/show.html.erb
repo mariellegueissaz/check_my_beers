@@ -33,6 +33,7 @@
 </div>
 
 <%= link_to "Add a Review", new_beer_review_path(@beer)  %>
+<%= link_to "Save as favorite", beer_favorites_path(@beer), method: :post, data: { confirm: "Save as favorite?" }  %>
 
 
 <% unless @beer.reviews.count == 0 %>

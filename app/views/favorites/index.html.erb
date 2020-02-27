@@ -1,0 +1,14 @@
+ <% @favorites.each do |favorite| %>
+          <% if favorite.beer.photo.attached? %>
+            <%= image_tag(favorite.beer.photo, :alt => "beer") %>
+          <% else %>
+            <%= image_tag("beer_logo.png", :alt => "beer") %>
+          <% end %>
+  <h3><%= favorite.beer.name %> <%= favorite.beer.brewery %></h3>
+  <p><%= favorite.beer.location %></p>
+
+              <%= link_to favorite_path(favorite), method: :delete, data: { confirm: "Es-tu sûr? C'est du bon jus pourtant!"} do %>
+              <i class= "far fa-trash-alt" id="delete"></i>
+              <% end %>
+
+    <% end %>
