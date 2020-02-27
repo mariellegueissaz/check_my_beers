@@ -1,40 +1,70 @@
 .beer-card {
   width: 100%;
-  height: 140px;
+  height: 120px;
   background: white;
   display: flex;
-  align-items: center;
+  // align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid $mylight-grey;
   .card-beer-infos {
-    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 200px auto;
+    padding: 10px 16px;
     min-width: calc(100% - 120px);
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+  }
+  h4 {
+    margin-bottom: 2px;
+  }
+  a {
+    position: absolute;
+    display: block;
+    color: transparent;
+    width: 100%;
+    height: 100px;
+  }
+  &:hover {
+    background-color: $warm-yellow;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-beer-infos {
+    padding: 7px 16px !important;
   }
 }
 
 .beer-card img {
   height: 100%;
-  width: 120px;
   object-fit: cover;
 }
 
-.beer-card p {
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 0;
-  margin-top: 8px;
+.main-infos {
+  position: relative;
 }
 
 .brewery {
-  font-style: italic;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $dark-yellow;
+  margin-bottom: 0;
 }
 
-.second-infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.line {
+  height: 5px;
+  width: 30px;
+  background-color: $dark-yellow;
+}
+
+.category {
+  position: absolute;
+  bottom: 5px;
+  margin-bottom: 0;
+  i {
+    margin-right: 5px;
+    color: $dark-yellow;
+  }
 }
 
 .rate-info {

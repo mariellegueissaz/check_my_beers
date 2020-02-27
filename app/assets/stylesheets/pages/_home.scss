@@ -1,9 +1,9 @@
 ///////////// MAIN CSS
 
 body {
-  background: #dedede url(https://hankchizljaw.imgix.net/noise.webp?auto=format);
-  color: var(--color-text);
-  overflow-x:hidden;
+  // background: #dedede url(https://hankchizljaw.imgix.net/noise.webp?auto=format);
+  // color: var(--color-text);
+  // overflow-x:hidden;
 }
 
 a {
@@ -17,49 +17,47 @@ h1 {
   }
 }
 
-h2 {
-  font-family: $playfair;
-  color: $warm-yellow;
-  font-weight: 700;
-  text-align: center;
-  font-size: 25px;
-  font-style: italic;
-}
+// h2 {
+//   font-family: $playfair;
+//   color: $warm-yellow;
+//   font-weight: 700;
+//   text-align: center;
+//   font-size: 25px;
+//   font-style: italic;
+// }
 
 h3 {
   color: $mydark;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 38px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 h4 {
   color: $mydark;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-h5 {
-  font-family: $playfair;
-  font-weight: 700;
-  font-style: italic;
-  color: $warm-yellow;
-  font-size: 28px;
-}
+// h5 {
+//   font-family: $playfair;
+//   font-weight: 700;
+//   font-style: italic;
+//   color: $warm-yellow;
+//   font-size: 28px;
+// }
 
 p {
   color: $mydark;
 }
 
-.container {
-  padding: 0;
-}
-
 //////////////////////////////////////////////////////////////
 
 .home-container {
+  grid-row: 2;
+  grid-column: 1 / 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,13 +69,14 @@ p {
   background-position: center;
 }
 
+.container {
+  grid-column: 1 / 5;
+}
+
 .header {
   text-align: center;
   justify-content: center;
   margin-bottom: 50px;
-  i {
-    margin: 0 13px;
-  }
 }
 
 .home-nav {
@@ -85,6 +84,8 @@ p {
   justify-content: center;
   margin: 0;
 }
+
+
 
 
 

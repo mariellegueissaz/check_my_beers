@@ -1,22 +1,25 @@
 <div class="container">
-  <%= form_tag beers_path, method: :get do %>
-  <%= text_field_tag :name,
-    params[:name],
-    class: "form-control",
-    placeholder: "Enter a beer name"%>
-  <%= submit_tag "Search", class: "search-btn" %>
-  <% end %>
-
-  <h2>Advanced Search</h2>
+  <div class="search-nav">
     <%= form_tag beers_path, method: :get do %>
-    <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type"%>
-    <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
-    <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
-    <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
-    <%= number_field_tag 'price', nil, within: 1...10 %>
+    <%= text_field_tag :name,
+      params[:name],
+      class: "form-control",
+      placeholder: "Enter a beer name"%>
     <%= submit_tag "Search", class: "search-btn" %>
-  <% end %>
-  <h3>Check my Beers</h3>
+    <% end %>
+
+    <h2>Advanced Search</h2>
+      <%= form_tag beers_path, method: :get do %>
+      <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type"%>
+      <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
+      <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
+      <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
+      <%= number_field_tag 'price', nil, within: 1...10 %>
+      <%= submit_tag "Search", class: "search-btn" %>
+    <% end %>
+  </div>
+
+  <h3>All beers</h3>
 
   <% @beers.each do |beer| %>
     <div class="beer-card">
@@ -29,16 +32,13 @@
 
       <div class="card-beer-infos">
         <div class="main-infos">
-          <h4><%= beer.name %></h4>
           <p class="brewery"><%= beer.brewery %></p>
-          <p><%= beer.category %></p>
+          <h4><%= beer.name %></h4>
+          <div class="line"></div>
+          <p class="category"><i class="fab fa-pagelines"></i><%= beer.category %></p>
         </div>
 
-        <div class="second-infos">
-          <div class="rate-info"><i class="fas fa-beer"></i>
-          </div>
-          <%= link_to "Details", beer_path(beer.id), class: "btn-medium" %>
-        </div>
+        <%= link_to 'beer', beer_path(beer.id) %>
       </div>
     </div>
   <% end %>

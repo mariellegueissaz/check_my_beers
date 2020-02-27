@@ -4,6 +4,12 @@
 //   background-color: $mydark;
 // }
 
+.navbar {
+  display: flex;
+  grid-row: 1;
+  grid-column: 1 / 5;
+}
+
 .navbar-brand img {
   width: 40px;
 }
