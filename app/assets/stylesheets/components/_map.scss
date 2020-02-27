@@ -1,0 +1,16 @@
+#map {
+  margin-top: 10px;
+  border:3px solid $dark-yellow;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+}
+
+.mapboxgl-popup-content p {
+ color: $mydark;
+}
