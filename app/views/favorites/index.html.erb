@@ -36,6 +36,11 @@
 <p class="brewery"><%= beer.category %></p>
   <p><%= beer.degree %></p>
         </div>
+        <div class="second-infos">
+          <div class="rate-info"><i class="fas fa-beer"></i>
+          </div>
+          <%= link_to "Details", beer_path(beer.id), class: "btn-medium" %>
+        </div>
       </div>
 <% end %>
   </div>
