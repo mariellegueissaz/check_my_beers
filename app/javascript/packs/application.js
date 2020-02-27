@@ -17,14 +17,14 @@ ScanditSDK.BarcodePicker.create(document.getElementById("scandit-barcode-picker"
   barcodePicker.applyScanSettings(scanSettings);
   barcodePicker.onScan(function(scanResult) {
     scanResult.barcodes.reduce(function(string, barcode) {
-      fetch(`http://localhost:3000/find_beer_from_scan?code=${barcode.data}`)
+      fetch(`/find_beer_from_scan?code=${barcode.data}`)
       .then(response => response.json())
       .then((data) => {
         if (data === null) {
           console.log(data)
           alert("No beer found");
         } else {
-          window.location.href = `http://localhost:3000/beers/${data.id}`;
+          window.location.href = `/beers/${data.id}`;
         }
       });
     }, "");
