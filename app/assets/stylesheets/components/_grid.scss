@@ -1,21 +1,20 @@
 .main-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-template-rows: 60px auto;
 }
 
-
-
-///////////////////////// MEDIA QUERIES
-
-@media screen(max-width: 667px) {
-  .main-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media screen (max-width: 568px) {
+@media (max-width: 667px) {
   .main-container {
     grid-template-columns: 1fr 1fr;
+  }
+  .banner-product {
+    grid-column: 1 / 3;
+    img {
+      height: 300px;
+    }
+  }
+  .container.product {
+    grid-column: 1 / 3;
   }
 }
