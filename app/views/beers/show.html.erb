@@ -1,17 +1,22 @@
-<div class="container">
   <div class="banner-product">
-  <h3><%= @beer.name %></h3>
-  <%= image_tag(@photo, :alt => "beer") %>
-</div>
+    <h3><%= @beer.name %></h3>
+    <%= image_tag(@photo, :alt => "beer") %>
+  </div>
+<div class="container">
   <div class="card-details-product">
-    <h5>Description</h5>
-    <p><%= @beer.description %></p>
+     <div class="description">
+        <p><%= @beer.description %></p>
+     </div>
   </div>
   <div class="card-details-product">
     <div class="flex">
       <div class="detail-product">
         <h4><i class="fas fa-home"></i> Origin</h4>
         <p><%= @beer.location %></p>
+      </div>
+      <div class="detail-product">
+        <h4><i class="fas fa-industry"></i> Brewery</h4>
+        <p><%= @beer.brewery %></p>
       </div>
       <div class="detail-product">
         <h4><i class="fab fa-pagelines"></i> Category</h4>
