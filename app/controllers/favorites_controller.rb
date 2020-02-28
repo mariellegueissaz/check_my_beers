@@ -2,9 +2,6 @@ class FavoritesController < ApplicationController
   def index
     @favorites = Favorite.all.where(user: current_user)
     @beers_recommended = Beer.all.sample(3)
-      while @beers_recommended.include?(@favorites)
-        @beers_recommended = Beer.all.sample(3)
-      end
   end
 
   def create
@@ -16,10 +13,13 @@ class FavoritesController < ApplicationController
     end
     @favorite.beer = @beer
     @favorite.user = current_user
-    if @favorite.save
-      redirect_to myfavorites_path
+    @favorite.name = @beer.name
+    if current_user.favorites.where(beer: @beer).empty?
+      if @favorite.save
+        redirect_to myfavorites_path
+      end
     else
-      redirect_to beer_path(@beer)
+        redirect_to beer_path(@beer), error: "Beer already saved!"
     end
   end
 
