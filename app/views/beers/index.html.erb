@@ -10,10 +10,10 @@
 
     <h2>Advanced Search</h2>
       <%= form_tag beers_path, method: :get do %>
-      <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type"%>
-      <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
-      <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
-      <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
+      <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a Type"%>
+      <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a Brewery"%>
+      <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a Category"%>
+      <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a Country" %>
       <%= number_field_tag 'price', nil, within: 1...10 %>
       <%= submit_tag "Search", class: "search-btn" %>
     <% end %>

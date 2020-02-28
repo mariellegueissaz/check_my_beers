@@ -1,3 +1,5 @@
+require 'csv'
+
 class BeersController < ApplicationController
   def index
     if params[:name].present?
@@ -32,6 +34,23 @@ class BeersController < ApplicationController
     beer_rate
   end
 
+  def new
+    @beer = Beer.new
+    @barcode = params[:code]
+  end
+
+  def create
+    @beer = Beer.new(beer_params)
+    CSV.open('beers.csv', 'ab') do |csv|
+      csv << [@beer.barcode, @beer.name, @beer.brewery, @beer.beer_type, @beer.location]
+    end
+    if @beer.save
+      redirect_to beer_path(@beer)
+    else
+      render :new
+    end
+  end
+
   def scan
 
   end
@@ -47,13 +66,19 @@ class BeersController < ApplicationController
     sum = 0
     @reviews = @beer.reviews
     @reviews.each do |review|
-    sum = sum + review.rate
+      sum = sum + review.rate
     end
     if @reviews.count == 0
       @beer_rate = 1
     else
-    @beer_rate = sum / @reviews.count
-  end
+      @beer_rate = sum / @reviews.count
+    end
   end
 
+private
+
+  def beer_params
+    params.require(:beer).permit(:barcode, :name, :beer_type, :brewery, :location, :category, :degree, :photo)
+
+  end
 end

@@ -25,8 +25,9 @@ ScanditSDK.BarcodePicker.create(document.getElementById("scandit-barcode-picker"
       .then(response => response.json())
       .then((data) => {
         if (data === null) {
-          console.log(data)
-          alert("No beer found");
+          if (confirm('No Beer found. Add to Database?')) {
+            window.location.href = `/beers/new?barcode=${barcode.data}`;
+          }
         } else {
           window.location.href = `/beers/${data.id}`;
         }
