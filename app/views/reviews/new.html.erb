@@ -1,11 +1,11 @@
-<div class="form-container">
-  <h1>Your review</h1>
-  <div class="form-box">
+<div class="container">
+  <h3>Your review</h3>
+  <div class="form-create">
     <%= simple_form_for([ @beer, @review ]) do |f| -%>
       <%= f.input :content %>
       <%= f.input :rate, collection: Review::STARS %>
   </div>
-      <%= f.submit class: "bookme-btn" %>
+      <%= f.submit class: "submit-btn" %>
     <% end -%>
 </div>
 
