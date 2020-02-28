@@ -1,10 +1,18 @@
-// .btn-medium {
-//   height: 100%;
-//   width: 120px;
-//   background-color: $warm-yellow;
-//   &:hover {
-//     text-decoration: none;
-//     color: $white;
-//     background-color: $dark-yellow;
-//   }
-// }
+.btn-medium {
+
+  width: 120px;
+  background-color: $warm-yellow;
+  vertical-align: middle;
+  padding: 6px;
+  text-align: center;
+  margin-top: 10px;
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $dark-yellow;
+  }
+}
+
+.btn-medium a {
+  color: $mydark;
+}
