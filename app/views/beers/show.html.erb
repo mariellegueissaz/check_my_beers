@@ -1,4 +1,7 @@
   <div class="banner-product">
+    <%= link_to beers_path, class: "back-btn" do %>
+      <i class="far fa-arrow-alt-circle-left"></i>
+    <% end %>
     <h3><%= @beer.name %></h3>
     <%= image_tag(@photo, :alt => "beer") %>
   </div>
