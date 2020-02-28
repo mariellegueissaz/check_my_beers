@@ -7,6 +7,13 @@ Review.destroy_all
 Beer.destroy_all
 User.destroy_all
 
+puts "Create User..."
+
+User.create! (
+  email: "arthurrr@gmail.com"
+  password: "arthurrr"
+  )
+
 csv_options = {col_sep: ';', quote_char: '|', headers: :first_row }
 filepath    = 'app/assets/csv/beers.csv'
 
