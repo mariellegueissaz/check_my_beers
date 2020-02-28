@@ -1,12 +1,13 @@
 .scanner {
-  text-align: center;
+  grid-column: 1 / 3;
+  #scandit-barcode-picker {
+    height: 100vh !important;
+  }
+  video {
+    object-fit: cover !important;
+  }
 }
 
-.scanner h3 {
-  padding-top: 10px;
-}
-
-#scandit-barcode-picker {
-  display: inline-block;
-  border-radius: 5px;
+.scandit.scandit-barcode-picker {
+    max-height: 100% !important;
 }

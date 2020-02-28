@@ -1,24 +1,39 @@
 .card-details-product {
-
-  // background-color: $mydark;
-  // padding: 20px;
-  // margin-bottom: 10px;
-  // p {
-  //   color: $white;
-  // }
-  // h4 {
-  //   color: $warm-yellow;
-  //   font-weight: 400;
-  // }
-  // .flex {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   flex-wrap: wrap;
-  // }
-  // .detail-product {
-  //   min-width: 215px;
-  //   display: flex;
-  //   flex-direction: column;
-  // }
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  h4 {
+    font-weight: 700;
+  }
+  i {
+    color: $dark-yellow;
+    margin-right: 5px;
+  }
+  .flex {
+    padding: 0 15px;
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
+.detail-product {
+  min-width: 150px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  grid-column: 1 / 3;
+  border-bottom: 3px solid $dark-yellow;
+  // border-top: 1px solid $dark-yellow;
+  // margin: 20px 15px;
+  padding-bottom: 20px;
+  p {
+    font-style: italic;
+    margin-bottom: 0;
+  }
+}
+
 
