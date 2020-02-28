@@ -1,0 +1,12 @@
+.submit-btn {
+  background-color: $warm-yellow;
+  color: $white;
+  text-transform: uppercase;
+  max-height: 40px;
+  min-height: 40px;
+  width: 100%;
+  border: 0;
+  &:hover {
+    background-color: $mydark;
+  }
+}
