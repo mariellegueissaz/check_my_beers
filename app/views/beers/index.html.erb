@@ -2,6 +2,7 @@
   <div class="search-nav">
     <div class="basic-search">
       <%= form_tag beers_path, method: :get do %>
+
       <%= text_field_tag :name,
         params[:name],
         class: "form-control",
