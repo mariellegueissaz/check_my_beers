@@ -13,7 +13,8 @@ filepath    = 'app/assets/csv/beers.csv'
 puts "Create Beers..."
 
 CSV.foreach(filepath, csv_options) do |row|
-Beer.create!(
+
+b = Beer.create!(
     name: row['product_name'],
     location: row['manufacturing_places'],
     beer_type: row['categories'],
@@ -21,7 +22,8 @@ Beer.create!(
     category: row['main_category'],
     barcode: row['code'],
     brewery: row['brands'],
-    description: row['main']
+    description: row['main'],
+    picture_url: row['image_front_url']
     )
 end
 
