@@ -9,8 +9,8 @@ User.destroy_all
 
 puts "Create User..."
 
-User.create! (
-  email: "arthurrr@gmail.com"
+arthur = User.create!(
+  email: "arthurrr@gmail.com",
   password: "arthurrr"
   )
 
