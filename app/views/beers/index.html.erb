@@ -15,8 +15,8 @@
         <%= form_tag beers_path, method: :get do %>
         <div class="flex">
           <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type"%>
-          <%#= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
-          <%#= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
+          <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
+          <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
           <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
         </div>
         <div class="price-range">
@@ -32,12 +32,15 @@
 
   <% @beers.each do |beer| %>
     <div class="beer-card">
+      <div class="beer-wrapper">
 
-        <% if beer.photo.attached? %>
-        <%= cl_image_tag beer.photo, :alt => "beer" %>
+        <% if beer.picture_url.nil? %>
+          <%= image_tag "default-picture.jpg" %>
         <% else %>
-        <%= image_tag "default-picture.jpg" %>
+          <img src="<%= beer.picture_url %>" alt="Beer.jpg">>
+          <%#= cl_image_tag beer.photo, :alt => "beer" %>
         <% end %>
+      </div>
 
       <div class="card-beer-infos">
         <div class="main-infos">
