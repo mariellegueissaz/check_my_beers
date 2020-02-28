@@ -1,6 +1,8 @@
 //////////// FORM SEARCH
 
-
+.form h1 {
+  color: $warm-yellow;
+}
 
 ::placeholder {
   font-style: italic;
@@ -10,4 +12,8 @@ select {
   background-color: $white;
 }
 
+.form {
+  padding: 40px;
+}
 ////////////////////////
+
