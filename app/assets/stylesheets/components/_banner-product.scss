@@ -1,6 +1,11 @@
 .banner-product {
   position: relative;
   grid-column: 1 / 5;
+  .back-btn {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+  }
 }
 
 .banner-product img {
@@ -18,3 +23,5 @@
   letter-spacing: 2px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
+
+
