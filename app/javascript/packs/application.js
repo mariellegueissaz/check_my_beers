@@ -12,7 +12,7 @@ ScanditSDK.configure("AQN+4R24A/5tO11u+j0nZ1AecF3/Cv/d3H4uZrsNjqZXX9qQqWGKJu5+LK
 
 ScanditSDK.BarcodePicker.create(document.getElementById("scandit-barcode-picker"), {
   playSoundOnScan: true,
-  vibrateOnScan: true
+  vibrateOnScan: true,
 }).then(function(barcodePicker) {
   var scanSettings = new ScanditSDK.ScanSettings({
     enabledSymbologies: ["ean8", "ean13", "upca", "upce", "code128", "code39", "code93", "itf"],
