@@ -1,3 +1,45 @@
 .search-nav {
-  display: none;
+  // display: flex;
+}
+
+.basic-search {
+  form {
+
+  }
+  input {
+    // border: 2px solid $warm-yellow;
+    border: none;
+    height: 50px;
+  }
+}
+
+.advanced-search {
+  h4 {
+    padding: 10px 0 0 10px;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  form {
+  }
+  select {
+    border: 2px solid $warm-yellow;
+    border-radius: 0;
+    max-width: 150px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+.price-range {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  input {
+  border: 2px solid $warm-yellow;
+  width: 100px;
+  }
 }
