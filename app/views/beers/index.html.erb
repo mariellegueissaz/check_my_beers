@@ -6,10 +6,10 @@
         params[:name],
         class: "form-control",
         placeholder: "Enter a beer name"%>
+    </div>
       <%= submit_tag "Search", class: "submit-btn" %>
       <% end %>
-    </div>
-
+    <!-- <button onclick="myFunction()">click me</button> -->
     <div class="advanced-search">
       <h4>Advanced Search</h4>
         <%= form_tag beers_path, method: :get do %>
@@ -18,13 +18,13 @@
           <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
           <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
           <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
+          <div class="price-range">
+            <%= number_field_tag 'price', nil, within: 1...10 %>
+          </div>
         </div>
-        <div class="price-range">
-          <%= number_field_tag 'price', nil, within: 1...10 %>
-        </div>
+    </div>
         <%= submit_tag "Search", class: "submit-btn" %>
       <% end %>
-    </div>
 
   </div>
 

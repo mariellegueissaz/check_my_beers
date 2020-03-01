@@ -1,8 +1,10 @@
 .search-nav {
   // display: flex;
+  padding: 10px;
 }
 
 .basic-search {
+  border-bottom: 6px solid $warm-yellow;
   form {
 
   }
@@ -14,13 +16,16 @@
 }
 
 .advanced-search {
+    margin-top: 20px;
+    border-bottom: 6px solid $warm-yellow;
   h4 {
     padding: 10px 0 0 10px;
   }
   .flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    grid-column: 1;
     padding: 10px;
   }
   form {
@@ -30,16 +35,17 @@
     border-radius: 0;
     max-width: 150px;
     height: 40px;
-    margin-bottom: 10px;
+    margin: 10px 10px 0 0;
   }
 }
 
 .price-range {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+  // display: flex;
+  // justify-content: center;
+  margin: 10px 0 10px 0;
   input {
   border: 2px solid $warm-yellow;
   width: 100px;
+  background-color: $white;
   }
 }
