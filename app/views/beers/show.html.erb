@@ -61,11 +61,13 @@
   ></div>
 </div>
 
-  <div class="btn-medium">
-    <%= link_to "Add a Review", new_beer_review_path(@beer)  %>
-  </div>
-  <div class="btn-medium">
-    <%= link_to "Save as favorite", beer_favorites_path(@beer), method: :post, data: { confirm: "Save as favorite?" }  %>
+  <div class="user-choice">
+    <div class="btn-medium">
+      <%= link_to "Add a Review", new_beer_review_path(@beer)  %>
+    </div>
+    <div class="btn-medium">
+      <%= link_to "Save as favorite", beer_favorites_path(@beer), method: :post, data: { confirm: "Save as favorite?" }  %>
+    </div>
   </div>
 
   <% unless @beer.reviews.count == 0 %>
@@ -88,4 +90,18 @@
         <% end %>
     </div>
   <% end %>
+
+  <div class="footer">
+    <div class="nav-footer">
+      <%= link_to root_path do %>
+        <i class="fas fa-home"></i>
+      <% end %>
+      <%= link_to beers_path do %>
+        <i class="fas fa-beer"></i>
+      <% end %>
+      <%= link_to scan_path do %>
+        <%= image_tag 'scan-pictoW.png' %>
+      <% end %>
+    </div>
+  </div>
 </div>

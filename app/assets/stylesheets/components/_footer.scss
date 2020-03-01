@@ -1,0 +1,39 @@
+.footer {
+  height: 40px;
+  background-color: $mydark;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 18px;
+    display: block;
+    margin: 0 20px;
+  }
+  i {
+    font-size: 20px;
+    display: block;
+    margin: 0 20px;
+  }
+}
+
+.nav-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-footer i:hover, i:active {
+  color: $warm-yellow;
+  text-decoration: none;
+}
+
+.nav-footer i:visited {
+  color: $white;
+}
+
+.nav-footer img:hover {
+  background-image: url('scan-pictoW.png');
+}
