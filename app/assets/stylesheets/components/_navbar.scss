@@ -45,7 +45,6 @@
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  // transition-delay: 0.5s;
 }
 
 .sidebar a:hover {
@@ -73,9 +72,8 @@
 }
 
 #main {
-  position: fixed;
-  right: 20px;
-  top: 18px;
+  margin-top: 5px;
+  margin-right: 5px;
   i {
     font-size: 25px;
   }
