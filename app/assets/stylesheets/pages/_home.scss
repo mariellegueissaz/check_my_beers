@@ -76,6 +76,10 @@ p {
   max-width: 1200px;
 }
 
+.content {
+  width: 100%;
+}
+
 .header {
   text-align: center;
   justify-content: center;
@@ -83,9 +87,11 @@ p {
 }
 
 .home-nav {
+  // background-color: rgba(43, 43, 40, 0.3);
+  padding: 10px 0;
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 0 40px 0;
 }
 
 
