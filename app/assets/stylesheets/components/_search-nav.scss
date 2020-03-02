@@ -2,11 +2,11 @@
 
 }
 
-#openbtn-search {
+#showbtn-search {
   display: inline;
 }
 
-#openbtn-search a {
+#showbtn-search a {
   color: $warm-yellow;
   text-decoration: none;
   &:hover {
@@ -30,6 +30,7 @@
 }
 
 .advanced-search {
+  display: none;
     margin-top: 20px;
     border-bottom: 6px solid $warm-yellow;
   h4 {
