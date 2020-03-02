@@ -1,5 +1,5 @@
-function openAdvancedSearch() {
-  const openbtn = document.querySelector(".openbtn")
+let openAdvancedSearch = () => {
+  const openbtn = document.querySelector(".showbtn")
 
   openbtn.addEventListener('click', () => {
     const x = document.getElementById("advanced-search");
