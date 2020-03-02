@@ -1,6 +1,20 @@
 .search-nav {
-  // display: flex;
-  padding: 10px;
+
+}
+
+#openbtn-search {
+  display: inline;
+}
+
+#openbtn-search a {
+  color: $warm-yellow;
+  text-decoration: none;
+  &:hover {
+    color: $mydark;
+  }
+  &:visited {
+    color: $warm-yellow;
+  }
 }
 
 .basic-search {
