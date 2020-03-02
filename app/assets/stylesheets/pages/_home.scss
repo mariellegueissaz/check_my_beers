@@ -1,9 +1,7 @@
 ///////////// MAIN CSS
 
 body {
-  // background: #dedede url(https://hankchizljaw.imgix.net/noise.webp?auto=format);
-  // color: var(--color-text);
-  // overflow-x:hidden;
+
 }
 
 a {
@@ -72,7 +70,7 @@ p {
 
 .container {
   grid-column: 1 / 5;
-  padding: 0;
+  padding: 0 10px;
   max-width: 1200px;
 }
 
