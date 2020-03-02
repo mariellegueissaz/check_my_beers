@@ -1,73 +1,73 @@
-  <div class="banner-product">
-    <%= link_to beers_path, class: "back-btn" do %>
-      <i class="far fa-arrow-alt-circle-left"></i>
-    <% end %>
-    <h3><%= @beer.name %></h3>
-    <%= image_tag(@photo, :alt => "beer") %>
+<div class="banner-product">
+  <%= link_to beers_path, class: "back-btn" do %>
+    <i class="far fa-arrow-alt-circle-left"></i>
+  <% end %>
+  <h3><%= @beer.name %></h3>
+  <%= image_tag(@photo, :alt => "beer") %>
 
-    <div class="options-product">
-      <div class="btn-show">
-        <%= link_to new_beer_review_path(@beer) do %>
-          <i class="fas fa-plus"></i>
-        <% end %>
-      </div>
-      <div class="btn-show">
-        <%= link_to beer_favorites_path(@beer), method: :post do  %>
-          <i class="far fa-heart"></i>
-        <% end %>
-      </div>
-
+  <div class="options-product">
+    <div class="btn-show">
+      <%= link_to new_beer_review_path(@beer) do %>
+        <i class="fas fa-plus"></i>
+      <% end %>
     </div>
+    <div class="btn-show">
+      <%= link_to beer_favorites_path(@beer), method: :post do  %>
+        <i class="far fa-heart"></i>
+      <% end %>
+    </div>
+
   </div>
+</div>
+
 <div class="container">
   <div class="card-details-product">
      <div class="description">
         <p><%= @beer.description %></p>
      </div>
   </div>
+
   <div class="card-details-product">
     <div class="flex">
+
       <div class="detail-product">
         <h4><i class="fas fa-home"></i> Origin</h4>
         <p><%= @beer.location %></p>
       </div>
+
       <div class="detail-product">
         <h4><i class="fas fa-industry"></i> Brewery</h4>
         <p><%= @beer.brewery %></p>
       </div>
+
       <div class="detail-product">
         <h4><i class="fab fa-pagelines"></i> Category</h4>
         <p><%= @beer.category %></p>
       </div>
+
       <div class="detail-product">
         <h4><i class="fas fa-glass-whiskey"></i> Type</h4>
         <p><%= @beer.beer_type %></p>
       </div>
+
       <div class="detail-product">
         <h4><i class="fas fa-percent"></i> Degree</h4>
         <p><%= @beer.degree %> %</p>
       </div>
+
       <div class="detail-product">
         <h4>Rate</h4><p><% @beer_rate.times do |i| %><i class="fas fa-beer"></i>
         <% end %></p>
       </div>
-  </div>
-  <div
-    id="map"
-    style="width: 100%;
-    height: 400px;"
-    data-markers="<%= @marker.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-</div>
 
-  <div class="user-choice">
-    <div class="btn-medium">
-      <%= link_to "Add a Review", new_beer_review_path(@beer)  %>
     </div>
-    <div class="btn-medium">
-      <%= link_to "Save as favorite", beer_favorites_path(@beer), method: :post, data: { confirm: "Save as favorite?" }  %>
-    </div>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 300px;"
+      data-markers="<%= @marker.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   </div>
 
   <% unless @beer.reviews.count == 0 %>
@@ -90,7 +90,7 @@
         <% end %>
     </div>
   <% end %>
-
+</div>
   <div class="footer">
     <div class="nav-footer">
       <%= link_to root_path do %>
