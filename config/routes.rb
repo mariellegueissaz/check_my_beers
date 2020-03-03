@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'scan', to: 'beers#scan'
   get '/myreviews', to: 'reviews#index'
   get '/find_beer_from_scan', to: 'beers#find_beer_from_scan'
-   get '/myfavorites', to: 'favorites#index'
+  get '/myfavorites', to: 'favorites#index'
+  get '/guide', to: 'beers#guide'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
