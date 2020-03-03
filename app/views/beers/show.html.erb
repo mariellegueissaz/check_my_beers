@@ -31,17 +31,17 @@
     <div class="flex">
 
       <div class="detail-product">
-        <h4><i class="fas fa-home"></i> Origin</h4>
+        <h4><i class="fas fa-home"></i> Origine</h4>
         <p><%= @beer.location %></p>
       </div>
 
       <div class="detail-product">
-        <h4><i class="fas fa-industry"></i> Brewery</h4>
+        <h4><i class="fas fa-industry"></i> Brasserie</h4>
         <p><%= @beer.brewery %></p>
       </div>
 
       <div class="detail-product">
-        <h4><i class="fab fa-pagelines"></i> Category</h4>
+        <h4><i class="fab fa-pagelines"></i> Categorie</h4>
         <p><%= @beer.category %></p>
       </div>
 
@@ -51,7 +51,7 @@
       </div>
 
       <div class="detail-product">
-        <h4><i class="fas fa-percent"></i> Degree</h4>
+        <h4><i class="fas fa-percent"></i> Degré</h4>
         <p><%= @beer.degree %> %</p>
       </div>
 
@@ -71,37 +71,23 @@
   </div>
 
   <% unless @beer.reviews.count == 0 %>
-    <h6>Reviews</h6>
+    <h4>Commentaires</h4>
     <div class="reviews-cards">
-        <% @beer.reviews.each do |review| %>
-          <div class="review">
+      <% @beer.reviews.each do |review| %>
+        <div class="review">
             <div class="author">
               <p><i class="fas fa-user"></i> <%= review.user.email %></p>
             </div>
-            <div class="flex">
-              <div class="review-text">
-                <p><%= review.content %></p>
-              </div>
-              <div class="rate">
-                <p><%= review.rate %></p>
-              </div>
-            </div>
+          <div class="review-text">
+            <p><%= review.content %></p>
           </div>
-        <% end %>
+          <div class="rate">
+            <p><%= review.rate %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   <% end %>
+  <%= render 'shared/footer' %>
 </div>
-  <div class="footer">
-    <div class="nav-footer">
-      <%= link_to root_path do %>
-        <i class="fas fa-home"></i>
-      <% end %>
-      <%= link_to beers_path do %>
-        <i class="fas fa-beer"></i>
-      <% end %>
-      <%= link_to scan_path do %>
-        <%= image_tag 'scan-pictoW.png' %>
-      <% end %>
-    </div>
-  </div>
-</div>
+
