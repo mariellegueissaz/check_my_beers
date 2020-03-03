@@ -3,6 +3,7 @@
   height: 120px;
   background: white;
   display: flex;
+  position: relative;
   // align-items: center;
   flex-wrap: wrap;
   border-bottom: 1px solid $mylight-grey;
@@ -27,6 +28,18 @@
     background-color: $warm-yellow;
   }
 }
+
+.beer-card .second-infos {
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+    i {
+      color: $warm-yellow;
+    }
+    i:hover {
+      color: $mydark;
+    }
+  }
 
 @media (max-width: 600px) {
   .card-beer-infos {
