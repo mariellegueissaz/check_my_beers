@@ -17,7 +17,7 @@
           <h2>Salut <%= current_user.username %> !</h2>
         </div>
         <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
-        <%= link_to "Mes bières", beers_path %>
+        <%= link_to "Mes bières", favorites_path %>
       <% else %>
         <%= link_to "Login", new_user_session_path %>
       <% end %>
