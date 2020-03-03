@@ -8,6 +8,7 @@
   }
   input {
     border: 2px solid $warm-yellow;
+    width: 100%;
   }
   a {
     color: $mydark;
@@ -16,7 +17,14 @@
     color: $warm-yellow;
   }
   .simple_form {
-    margin-bottom: 20px;
+    // border: 3px solid $mydark;
+    // padding: 10px 20px;
+  }
+}
+
+.profile-avatar-form {
+  input {
+    // background-color: $warm-yellow;
   }
 }
 
@@ -28,8 +36,38 @@
   max-height: 30px;
   min-height: 30px;
   width: 140px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   border: 0;
   &:hover {
     background-color: $mydark;
   }
 }
+
+.user-choice-login {
+  display: flex;
+  padding-top: 20px;
+  .submit-btn {
+    text-align: center;
+    width: 130px;
+    font-size: 10px;
+    min-height: 20px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
