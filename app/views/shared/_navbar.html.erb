@@ -14,6 +14,8 @@
       <% if user_signed_in? %>
         <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
         <%= link_to "Mes bières", beers_path %>
+        <%# raise %>
+        <%= image_tag(current_user.photo) if current_user.photo.present? %>
       <% else %>
         <%= link_to "Login", new_user_session_path %>
       <% end %>

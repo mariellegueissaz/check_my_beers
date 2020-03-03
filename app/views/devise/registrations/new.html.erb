@@ -26,10 +26,7 @@
                     required: true,
                     placeholder: '**********',
                     input_html: { autocomplete: "new-password" } %>
-        <div class="profile-avatar-form">
-          <%= f.label :avatar %>
-          <%= f.file_field :avatar %>
-        </div>
+        <%= f.input :photo, as: :file %>
       </div>
 
       <div class="form-actions">
