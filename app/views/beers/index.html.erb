@@ -21,6 +21,7 @@
           <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
           <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
           <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
+          <button type="button" class="btn btn-primary">Locate me</button>
           <div class="price-range">
             <%= number_field_tag 'price', nil, within: 1...10 %>
           </div>
