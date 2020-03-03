@@ -7,14 +7,14 @@
         class: "form-control",
         placeholder: "Quelle bière veux-tu rechercher ?"%>
     </div>
-      <%= submit_tag "Search", class: "submit-btn" %>
+      <%= submit_tag "go !", class: "submit-btn" %>
       <% end %>
     <div id="showbtn-search">
-      <a href="#" class="showbtn">advanced research > </a>
+      <a href="#" class="showbtn">recherches avancées > </a>
     </div>
     <div class="advanced-search" id="advanced-search">
 
-      <h4>Advanced Search</h4>
+      <h4>Recherches avancées</h4>
         <%= form_tag beers_path, method: :get do %>
         <div class="flex">
           <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type" %>
@@ -32,7 +32,7 @@
   </div>
 
   <div class="header-index-beers">
-    <h3>All beers</h3>
+    <h3>les bières</h3>
     <p>(<%= @beers.count %>)</p>
   </div>
 
