@@ -1,12 +1,13 @@
 
 <div class="container">
-  <h3>Your review</h3>
+  <h3>Qu'en penses-tu ?</h3>
   <div class="form-create">
     <%= simple_form_for([ @beer, @review ]) do |f| -%>
-      <%= f.input :content %>
-      <%= f.input :rate, collection: Review::STARS %>
-  </div>
-      <%= f.submit class: "submit-btn" %>
+      <%= f.input :content, placeholder: "Ton commentaire ici" %>
+      <%= f.input :rate, collection: Review::STARS, prompt: "Ta note" %>
+      <%= f.submit class: "submit-btn", value: "ajouter" %>
     <% end -%>
+  </div>
+  <%= render 'shared/footer' %>
 </div>
 
