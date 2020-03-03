@@ -1,48 +1,50 @@
  <div class="container">
- <h2>Check my Favorites</h2>
- <% @favorites.each do |favorite| %>
-  <div class="beer-card">
-          <% if favorite.beer.photo.attached? %>
-            <%= image_tag(favorite.beer.photo, :alt => "beer") %>
-          <% else %>
-            <%= image_tag("default-picture.jpg", :alt => "beer") %>
-          <% end %>
-    <div class="card-beer-infos">
-        <div class="main-infos">
-  <h4><%= favorite.beer.name %></h4>
-  <p class="brewery"><%= favorite.beer.brewery %></p>
-  <p><%= favorite.beer.category %></p>
-        </div>
-  <div class="second-infos">
-  <%= link_to favorite_path(favorite), method: :delete, data: { confirm: "Es-tu sûr? C'est du bon jus pourtant!"} do %>
-  <i class= "far fa-trash-alt" id="delete"></i>
-  <% end %>
-</div>
-</div>
-<% end %>
-</div>
-
-<h2>You should try</h2>
-<% @beers_recommended.each do |beer| %>
-  <div class="beer-card">
-      <% if beer.photo.attached? %>
-        <%= image_tag(beer.photo, :alt => "beer") %>
+   <h2>Check my Favorites</h2>
+   <% @favorites.each do |favorite| %>
+    <div class="beer-card">
+      <% if favorite.beer.photo.attached? %>
+        <%= image_tag(favorite.beer.photo, :alt => "beer") %>
       <% else %>
         <%= image_tag("default-picture.jpg", :alt => "beer") %>
       <% end %>
-  <div class="card-beer-infos">
+      <div class="card-beer-infos">
         <div class="main-infos">
-<h4><%= beer.name %></h4>
-<p class="brewery"><%= beer.category %></p>
-  <p><%= beer.degree %></p>
+          <h4><%= favorite.beer.name %></h4>
+          <p class="brewery"><%= favorite.beer.brewery %></p>
+          <p><%= favorite.beer.category %></p>
         </div>
         <div class="second-infos">
-          <div class="rate-info"><i class="fas fa-beer"></i>
-          </div>
-          <%= link_to "Details", beer_path(beer.id), class: "btn-medium" %>
-        </div>
+          <%= link_to favorite_path(favorite), method: :delete, data: { confirm: "Es-tu sûr? C'est du bon jus pourtant!"} do %>
+          <i class= "far fa-trash-alt" id="delete"></i>
+    <% end %>
       </div>
-<% end %>
+    </div>
+    <% end %>
+  </div>
+
+  <h2>You should try</h2>
+  <% @beers_recommended.each do |beer| %>
+  <div class="beer-card">
+    <% if beer.photo.attached? %>
+      <%= image_tag(beer.photo, :alt => "beer") %>
+    <% elsif beer.picture_url.nil? %>
+      <%= image_tag("default-picture.jpg", :alt => "beer") %>
+    <% else %>
+      <img src="<%= beer.picture_url %>" alt="Beer.jpg">>
+    <% end %>
+    <div class="card-beer-infos">
+      <div class="main-infos">
+        <h4><%= beer.name %></h4>
+        <p class="brewery"><%= beer.category %></p>
+        <p><%= beer.degree %></p>
+      </div>
+      <div class="second-infos">
+        <div class="rate-info"><i class="fas fa-beer"></i>
+        </div>
+        <%= link_to "Details", beer_path(beer.id), class: "btn-medium" %>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
 
