@@ -6,11 +6,14 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { openAdvancedSearch } from '../components/nav_search';
 import { openNavbar } from '../components/open_navbar';
 import { closeNavbar } from '../components/close_navbar';
+import { locateUser } from '../components/geocoding';
+
 
 initMapbox();
 openNavbar();
 closeNavbar();
 openAdvancedSearch();
+locateUser();
 
 
 ////////////////////////////////////////////////////////// SCAN JS
