@@ -1,16 +1,4 @@
 <div class="scanner">
   <div id="scandit-barcode-picker"></div>
-  <div class="footer">
-    <div class="nav-footer">
-      <%= link_to root_path do %>
-        <i class="fas fa-home"></i>
-      <% end %>
-      <%= link_to beers_path do %>
-        <i class="fas fa-beer"></i>
-      <% end %>
-      <%= link_to scan_path do %>
-        <%= image_tag 'scan-pictoW.png' %>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'shared/footer' %>
 </div>

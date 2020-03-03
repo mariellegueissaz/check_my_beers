@@ -1,0 +1,32 @@
+.reviews-cards {
+  border-top: 4px solid $dark-yellow;
+}
+
+.review {
+  border-bottom: 3px solid $mylight-grey;
+  padding: 20px 6px 10px 6px;
+  // position: relative;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.rate p {
+  color: $dark-yellow;
+  font-size: 14px;
+  // position: absolute;
+  // top: 10px;
+  // right: 10px;
+}
+
+.author p {
+  font-size: 12px;
+  color: $mydark;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 14px;
+}
