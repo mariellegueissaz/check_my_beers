@@ -13,7 +13,7 @@
     <div class="sidebar-content">
       <% if user_signed_in? %>
         <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
-        <%= link_to "Mes bières", beers_path %>
+        <%= link_to "Mes bières", favorites_path %>
         <%# raise %>
         <%= image_tag(current_user.photo) if current_user.photo.attached? %>
       <% else %>

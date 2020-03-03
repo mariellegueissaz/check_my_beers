@@ -82,7 +82,7 @@ class BeersController < ApplicationController
       sum = sum + review.rate
     end
     if @reviews.count == 0
-      @beer_rate = 1
+      @beer_rate = 0
     else
       @beer_rate = sum / @reviews.count
     end
