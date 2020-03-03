@@ -32,8 +32,10 @@
   </div>
 
   <div class="header-index-beers">
-    <h3>les bières</h3>
-    <p>(<%= @beers.count %>)</p>
+
+    <h3>All beers</h3>
+    <p>(<%= @beers.length %>)</p>
+
   </div>
 
   <% @beers.each do |beer| %>

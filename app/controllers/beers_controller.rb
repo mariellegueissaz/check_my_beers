@@ -6,7 +6,7 @@ class BeersController < ApplicationController
       @lat = params[:lat]
       @lon = params[:lon]
       @div = true
-      @beers = Beer.near([@lat, @lon], 100)
+      @beers = Beer.near([@lat, @lon], 200)
       @markers = @beers.map { |b| { lat: b.latitude, lng: b.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: b }), image_url: helpers.asset_url('beer_pin.png') } }
     elsif params[:name].present?
       @div = true
