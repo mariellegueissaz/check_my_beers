@@ -35,8 +35,10 @@ class BeersController < ApplicationController
     @marker = [ { lat: @beer.latitude, lng: @beer.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: @beer }), image_url: helpers.asset_url('beer_pin.png') } ]
     if @beer.photo.attached?
       @photo = @beer.photo
-    else
+    elsif @beer.picture_url.nil?
       @photo = "default-picture.jpg"
+    else
+      @photo = @beer.picture_url
     end
     beer_rate
   end

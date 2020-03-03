@@ -39,12 +39,12 @@
   <% @beers.each do |beer| %>
     <div class="beer-card">
       <div class="beer-wrapper">
-
-        <% if beer.picture_url.nil? %>
-          <%= image_tag "default-picture.jpg" %>
+        <% if beer.photo.attached? %>
+          <%= image_tag(beer.photo, :alt => "beer") %>
+        <% elsif beer.picture_url.nil? %>
+          <%= image_tag("default-picture.jpg", :alt => "beer") %>
         <% else %>
-          <img src="<%= beer.picture_url %>" alt="Beer.jpg">
-          <%#= cl_image_tag beer.photo, :alt => "beer" %>
+            <img src="<%= beer.picture_url %>" alt="Beer.jpg">>
         <% end %>
       </div>
 
