@@ -40,13 +40,12 @@ h4 {
   font-size: 18px;
 }
 
-// h5 {
-//   font-family: $playfair;
-//   font-weight: 700;
-//   font-style: italic;
-//   color: $warm-yellow;
-//   font-size: 28px;
-// }
+h5 {
+  text-transform: uppercase;
+  color: $mydark;
+  font-weight: 700;
+  font-size: 20px;
+}
 
 p {
   color: $mydark;

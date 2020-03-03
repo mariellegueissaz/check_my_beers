@@ -64,6 +64,10 @@ class BeersController < ApplicationController
 
   end
 
+  def guide
+
+  end
+
   def find_beer_from_scan
     @barcode = params[:code]
     @beer = Beer.find_by(barcode: @barcode)
