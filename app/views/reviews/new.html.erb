@@ -7,7 +7,7 @@
       <%= f.input :content, placeholder: "Ton commentaire ici" %>
       <%= f.input :rate, collection: Review::STARS, prompt: "Ta note" %>
       <%= f.submit class: "submit-btn", value: "ajouter" %>
-    <% end -%>
+    <% end %>
   </div>
   <%= render 'shared/footer' %>
 </div>

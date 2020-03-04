@@ -75,20 +75,24 @@
     <div class="reviews-cards">
       <% @beer.reviews.each do |review| %>
         <div class="review">
-          <div class="author">
-            <p><%= link_to review.user.username, user_path(review.user.id) %></p>
+          <div class="header-review">
+            <div class="author">
+              <p><i class="fas fa-user-circle"></i><%= link_to review.user.username, user_path(review.user.id) %></p>
+            </div>
+            <div class="date">
+              <p><%= review.created_at.strftime("%d-%m-%Y") %></p>
+            </div>
           </div>
-          <div>
-            <p><%= review.title %></p>
+          <div class="flex">
+            <div class="title">
+              <p><%= review.title %></p>
+            </div>
+            <div class="rate">
+              <p><% review.rate.times do |i| %><i class="fas fa-beer"></i><% end %></p>
+            </div>
           </div>
           <div class="review-text">
             <p><%= review.content %></p>
-          </div>
-          <div class="rate">
-            <p><%= review.rate %></p>
-          </div>
-          <div>
-            <p><%= review.created_at.strftime("%d-%m-%Y") %></p>
           </div>
           </div>
       <% end %>
