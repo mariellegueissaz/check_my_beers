@@ -76,7 +76,7 @@
       <% @beer.reviews.each do |review| %>
         <div class="review">
           <div class="author">
-            <p><i class="fas fa-user"></i> <%= review.user.username %></p>
+            <p><%= link_to review.user.username, user_path(review.user.id) %></p>
           </div>
           <div>
             <p><%= review.title %></p>
