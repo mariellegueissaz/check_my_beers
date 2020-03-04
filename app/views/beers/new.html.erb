@@ -1,16 +1,20 @@
-<div class="form">
-  <h1>Add a beer!</h1>
-  <%= simple_form_for @beer do |f| %>
-    <%= f.input :barcode, :as => :hidden, :input_html => { :value => params[:barcode] } %>
-    <%= f.input :name, placeholder: 'Enter the name' %>
-    <%= f.input :beer_type, collection: Beer::CATEGORIES.sort.uniq!, prompt: 'Select a Type', class: "form-dropdown" %> %>
-    <%= f.input :brewery, collection: Beer::BREWERY.sort.uniq!, prompt: 'Select a Brewery', class: "form-dropdown" %>
-    <%#= f.input :price, placeholder: 'Enter the price' %>
-    <%= f.input :location, collection: Beer::LOCATION.sort.uniq!, prompt: 'Select a Country', class: "form-dropdown" %>
-    <%= f.input :category, collection: Beer::MAIN.sort.uniq!, prompt: 'Select a Category', class: "form-dropdown" %>
-    <%= f.input :degree, placeholder: 'Enter the degrees' %>
-    <%#= f.input :description, placeholder: 'Enter a description' %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class:'submit-btn' %>
-  <% end %>
+<div class="container">
+  <div class="form-create">
+    <h3>Ajoute ta bière</h3>
+    <%= simple_form_for @beer do |f| %>
+      <%= f.input :barcode, :as => :hidden, :input_html => { :value => params[:barcode] } %>
+      <%= f.input :name, placeholder: 'Nom de la bière' %>
+      <%= f.input :beer_type, collection: Beer::CATEGORIES.sort.uniq!, prompt: 'Type', class: "form-dropdown" %>
+      <%= f.input :brewery, collection: Beer::BREWERY.sort.uniq!, prompt: 'Brasserie', class: "form-dropdown" %>
+<!--       <%#= f.input :price, placeholder: 'Enter the price' %> -->
+      <%= f.input :location, collection: Beer::LOCATION.sort.uniq!, prompt: 'Origine', class: "form-dropdown" %>
+<!--       <%#= f.input :category, collection: Beer::MAIN.sort.uniq!, prompt: 'Catégorie', class: "form-dropdown" %> -->
+      <%= f.input :degree, placeholder: "Taux d'alcool" %>
+<!--       <%#= f.input :description, placeholder: 'Enter a description' %> -->
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, value: 'Ajouter', class:'submit-btn' %>
+    <% end %>
+  </div>
+  <%= render 'shared/footer' %>
 </div>
+
