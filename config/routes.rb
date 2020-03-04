@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/myfavorites', to: 'favorites#index'
   get '/guide', to: 'beers#guide'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, only: [:show]
 end

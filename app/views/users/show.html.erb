@@ -1,0 +1,16 @@
+<h3><%= @user.photo %></h3>
+<h3><%= @user.email %></h3>
+<h3><%= @user.username %></h3>
+<h3><%= @user.address %></h3>
+<h3><%= @user.created_at.strftime("%d-%m-%Y") %></h3>
+<% @user.favorites.each do |favorite| %>
+<h3><%= favorite.name %></h3>
+<% end %>
+<% @user.reviews.each do |review| %>
+<h3><%= review.title %></h3>
+<h3><%= review.content %></h3>
+<h3><%= review.rate %></h3>
+<h3><%= review.created_at.strftime("%d-%m-%Y") %></h3>
+<% end %>
+
+

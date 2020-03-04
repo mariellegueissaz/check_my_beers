@@ -4,7 +4,7 @@
     <div class="beer-card">
       <div class="beer-wrapper">
         <% if favorite.beer.photo.attached? %>
-          <%= image_tag(beer.photo, :alt => "beer") %>
+          <%= image_tag(favorite.beer.photo, :alt => "beer") %>
         <% elsif favorite.beer.picture_url.nil? %>
           <%= image_tag("default-picture.jpg", :alt => "beer") %>
         <% else %>
