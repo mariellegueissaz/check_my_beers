@@ -10,8 +10,14 @@
 
 .mapboxgl-popup-content {
   text-align: center;
+  padding: 10px;
 }
 
 .mapboxgl-popup-content p {
  color: $mydark;
+ margin-bottom: 0px;
+}
+
+.mapboxgl-popup-content a {
+ color: #E3B04B;
 }
