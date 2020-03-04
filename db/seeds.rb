@@ -23,6 +23,7 @@ CSV.foreach(filepath, csv_options) do |row|
 
 b = Beer.create!(
     name: row['product_name'],
+    address: row['address'],
     location: row['manufacturing_places'],
     beer_type: row['categories'],
     degree: row['alcohol_100g'],

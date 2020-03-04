@@ -1,2 +1,2 @@
-<h4>Address</h4>
-<p><%= beer.location %></p>
+<h4><%= link_to beer.name, beer_path(beer.id) %></h4>
+<p><em><%= beer.address %></em></p>
