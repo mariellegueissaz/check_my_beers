@@ -3,7 +3,7 @@ code;product_name;main_category;categories;brands;address;manufacturing_places;i
 4014807050492;Keller-Bier;Pale Ale;Bière Ambrée;Störtebecker;Stralsund, Mecklenburg-Vorpommern Germany;Allemagne;https://static.openfoodfacts.org/images/products/401/480/705/0492/front_de.5.400.jpg;4.8
 4014807204840;Atlantic-Ale;Pale Ale;Bière Blonde;Störtebecker;Stralsund, Mecklenburg-Vorpommern Germany;Allemagne;https://static.openfoodfacts.org/images/products/401/480/720/4840/front_en.10.400.jpg;5.1
 3770004835041;India Pale Ale;Stout;Bière Blonde;Shuc;Pau, France;France;https://static.openfoodfacts.org/images/products/377/000/483/5041/front_fr.5.400.jpg;7.5
-8711406000496;Tripel;American Pale Ale;Bière Blonde;La Trappe;Tilburg, Netherlands;Pays-Bas;https://static.openfoodfacts.org/images/products/871/140/600/0496/front_fr.5.400.jpg;8
+8711406000496;Tripel;American Pale Ale;;La Trappe;Tilburg, Netherlands;Pays-Bas;https://static.openfoodfacts.org/images/products/871/140/600/0496/front_fr.5.400.jpg;8
 4313042628047;Embuscade American Ipa;American Pale Ale;Bière Blonde;Nebuleuse;Chemin du Closel 5, 1020 Renens;Suisse;https://static.openfoodfacts.org/images/products/431/304/262/8047/front_fr.13.400.jpg;6.5
 4934418000115;Hitachino Nest Beer Pale Ale;IPA;Bière Blonde;Hitachino;1257 Konosu, Naka, Ibaraki 311-0133, Japan;Japon;https://static.openfoodfacts.org/images/products/493/441/800/0115/front_fr.8.400.jpg;5.5
 5000196000148;Guiness West Indies Porter;IPA;Bière Brune;Guinness;St. James Gate, Dublin, Ireland;Irlande;https://static.openfoodfacts.org/images/products/500/019/600/0148/front_en.6.400.jpg;6
@@ -12,6 +12,6 @@ code;product_name;main_category;categories;brands;address;manufacturing_places;i
 4052197002455;Benediktiner Original;Lager;Bière Blonde;Benediktiner;Kaiser-Ludwig-Platz 1, 82488 Ettal, Germany;Allemagne;https://static.openfoodfacts.org/images/products/405/219/700/2455/front_fr.5.400.jpg;5
 40173832;Maisel'S Weise Alkoholfrei;IPA;Bière Sans Alcool;Brauerei Gebr. Maisel;Bayreuth, Bayern Germany;Allemagne;https://static.openfoodfacts.org/images/products/40173832/front_de.6.400.jpg;0
 3760010130933;Rosée À La Fraise De Plougastel;IPA;Bière Aromatisée;Brasserie de Bretagne;Trégunc, Finistère France;France;https://static.openfoodfacts.org/images/products/376/001/013/0933/front_fr.5.400.jpg;3
-54085060;Rouge Rubis;IPA;Bière Rousse;Brouwerij Haacht Brasserie;Boortmeerbeek, Vlaams Brabant Belgium;Belgique;https://static.openfoodfacts.org/images/products/54085060/front_fr.7.400.jpg;8.5
+54085060;Rouge Rubis;;Bière Rousse;Brouwerij Haacht Brasserie;Boortmeerbeek, Vlaams Brabant Belgium;Belgique;https://static.openfoodfacts.org/images/products/54085060/front_fr.7.400.jpg;8.5
 8480017545701;Dia Forte 8%;IPA;Bière Blanche;Dia;Espagne;Espagne;https://static.openfoodfacts.org/images/products/848/001/754/5701/front_es.12.400.jpg;8
 20682934;Festbier & Maßkrug;Stout;Bière Blonde;Perlenbacher;Frankfurt, Germany;Allemagne;https://static.openfoodfacts.org/images/products/20682934/front_fr.4.400.jpg;5.5
