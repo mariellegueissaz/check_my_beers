@@ -4,7 +4,7 @@
     <div class="beer-card">
       <div class="beer-wrapper">
         <% if favorite.beer.photo.attached? %>
-          <%= image_tag(beer.photo, :alt => "beer") %>
+          <%= image_tag(favorite.beer.photo, :alt => "beer") %>
         <% elsif favorite.beer.picture_url.nil? %>
           <%= image_tag("default-picture.jpg", :alt => "beer") %>
         <% else %>
@@ -36,12 +36,12 @@
     <% @beers_recommended.each do |beer| %>
       <div class="beer-card">
         <div class="beer-wrapper">
-          <% if beer.photo.attached? %>
+          <% if favorite.beer.photo.attached? %>
             <%= image_tag(beer.photo, :alt => "beer") %>
-          <% elsif beer.picture_url.nil? %>
+          <% elsif favorite.beer.picture_url.nil? %>
             <%= image_tag("default-picture.jpg", :alt => "beer") %>
           <% else %>
-            <img src="<%= beer.picture_url %>" alt="Beer.jpg">>
+            <img src="<%= favorite.beer.picture_url %>" alt="Beer.jpg">>
           <% end %>
         </div>
 
