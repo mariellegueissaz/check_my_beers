@@ -1,34 +1,40 @@
 <div class="container">
   <h3>Mes favorites</h3>
-  <% @favorites.each do |favorite| %>
-    <div class="beer-card">
-      <div class="beer-wrapper">
-        <% if favorite.beer.photo.attached? %>
-          <%= image_tag(favorite.beer.photo, :alt => "beer") %>
-        <% elsif favorite.beer.picture_url.nil? %>
-          <%= image_tag("default-picture.jpg", :alt => "beer") %>
-        <% else %>
-          <img src="<%= favorite.beer.picture_url %>" alt="Beer.jpg">>
-        <% end %>
-      </div>
-
-      <div class="card-beer-infos">
-        <div class="main-infos">
-          <p class="brewery"><%= favorite.beer.brewery %></p>
-          <h4><%= favorite.beer.name %></h4>
-          <div class="line"></div>
-          <p class="category"><i class="fab fa-pagelines"></i><%= favorite.beer.category %></p>
-        </div>
-        <%= link_to 'beer', beer_path(favorite.beer.id) %>
-      </div>
-
-      <div class="second-infos">
-        <%= link_to favorite_path(favorite), method: :delete, data: { confirm: "Es-tu sûr? C'est du bon jus pourtant!"} do %>
-          <i class= "far fa-trash-alt" id="delete"></i>
-        <% end %>
-      </div>
-
+  <% if @favorites.length == 0 %>
+    <div class="no-fav-message">
+      <p><%= "Pas encore de favoris..." %> </br> <%= "Ça ne saurait tarder !" %></p>
     </div>
+  <% else %>
+    <% @favorites.each do |favorite| %>
+      <div class="beer-card">
+        <div class="beer-wrapper">
+          <% if favorite.beer.photo.attached? %>
+            <%= image_tag(favorite.beer.photo, :alt => "beer") %>
+          <% elsif favorite.beer.picture_url.nil? %>
+            <%= image_tag("default-picture.jpg", :alt => "beer") %>
+          <% else %>
+            <img src="<%= favorite.beer.picture_url %>" alt="Beer.jpg">>
+          <% end %>
+        </div>
+
+        <div class="card-beer-infos">
+          <div class="main-infos">
+            <p class="brewery"><%= favorite.beer.brewery %></p>
+            <h4><%= favorite.beer.name %></h4>
+            <div class="line"></div>
+            <p class="category"><i class="fab fa-pagelines"></i><%= favorite.beer.category %></p>
+          </div>
+          <%= link_to 'beer', beer_path(favorite.beer.id) %>
+        </div>
+
+        <div class="second-infos">
+          <%= link_to favorite_path(favorite), method: :delete, data: { confirm: "Tu as changé d'avis ?"} do %>
+            <i class= "far fa-trash-alt" id="delete"></i>
+          <% end %>
+        </div>
+
+      </div>
+    <% end %>
   <% end %>
 
   <div class="recommandations">
