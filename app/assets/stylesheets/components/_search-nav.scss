@@ -1,3 +1,22 @@
+.search-geo {
+  grid-column: 1 / 5;
+  height: 50px;
+  background-color: $warm-pink;
+  display: flex;
+  justify-content: center;
+  button {
+    color: $white;
+    text-transform: uppercase;
+    background-color: $warm-pink;
+    border-style: none;
+    border-color: none;
+    width: 100%;
+  }
+  i {
+    margin: 0 8px;
+  }
+}
+
 #showbtn-search {
   display: inline;
 }
@@ -52,12 +71,6 @@
 }
 
 .form-search .submit-btn {
-  margin-top: 20px;
-}
-
-.search-geo {
-  border-top: 1px solid $warm-yellow;
-  padding-top: 20px;
   margin-top: 20px;
 }
 
