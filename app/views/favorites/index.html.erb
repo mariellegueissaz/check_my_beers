@@ -3,15 +3,15 @@
   <% @favorites.each do |favorite| %>
     <div class="beer-card">
       <div class="beer-wrapper">
-        <% if beer.photo.attached? %>
+        <% if favorite.beer.photo.attached? %>
           <%= image_tag(beer.photo, :alt => "beer") %>
-        <% elsif beer.picture_url.nil? %>
+        <% elsif favorite.beer.picture_url.nil? %>
           <%= image_tag("default-picture.jpg", :alt => "beer") %>
         <% else %>
-          <img src="<%= beer.picture_url %>" alt="Beer.jpg">>
+          <img src="<%= favorite.beer.picture_url %>" alt="Beer.jpg">>
         <% end %>
       </div>
-      
+
       <div class="card-beer-infos">
         <div class="main-infos">
           <p class="brewery"><%= favorite.beer.brewery %></p>
@@ -19,6 +19,7 @@
           <div class="line"></div>
           <p class="category"><i class="fab fa-pagelines"></i><%= favorite.beer.category %></p>
         </div>
+        <%= link_to 'beer', beer_path(favorite.beer.id) %>
       </div>
 
       <div class="second-infos">
@@ -51,14 +52,12 @@
             <div class="line"></div>
             <p class="category"><i class="fab fa-pagelines"></i><%= beer.category %></p>
           </div>
-          <!-- <div class="second-infos">
-            <div class="rate-info"><i class="fas fa-beer"></i></div>
-            <#%= link_to "Details", beer_path(beer.id) %>
-          </div> -->
+          <%= link_to 'beer', beer_path(beer.id) %>
         </div>
 
       </div>
     <% end %>
+
   </div>
   <%= render 'shared/footer' %>
 </div>
