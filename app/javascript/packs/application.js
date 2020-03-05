@@ -7,13 +7,14 @@ import { openAdvancedSearch } from '../components/nav_search';
 import { openNavbar } from '../components/open_navbar';
 import { closeNavbar } from '../components/close_navbar';
 import { locateUser } from '../components/geocoding';
-
+import { initSelect2 } from '../plugins/init_select2';
 
 initMapbox();
 openNavbar();
 closeNavbar();
 openAdvancedSearch();
 locateUser();
+initSelect2();
 
 
 ////////////////////////////////////////////////////////// SCAN JS

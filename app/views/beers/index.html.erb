@@ -21,10 +21,10 @@
         <%= form_tag beers_path, method: :get do %>
         <div class="form-search">
           <div class="flex">
-            <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Type de Bière" %>
-            <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Brasserie"%>
-            <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Catégorie"%>
-            <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Pays" %>
+            <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Type de Bière", class: "type-select" %>
+            <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Brasserie", class: "brewery-select" %>
+            <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Catégorie", class: "category-select"%>
+            <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Pays", class: "location-select" %>
   <!--           <div class="price-range">
               <%#= number_field_tag 'price', nil, within: 1...10 %>
             </div> -->
