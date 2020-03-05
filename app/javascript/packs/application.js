@@ -10,9 +10,9 @@ import { locateUser } from '../components/geocoding';
 import { progressBarDisplay } from '../components/progressbar';
 
 
-const displaybtn = document.querySelector(".progressbar-btn");
-const progressbar = document.getElementById('progressbar');
-displaybtn.addEventListener('submit', (event) => console.log(event));
+// const displaybtn = document.querySelector(".progressbar-btn");
+// const progressbar = document.getElementById('progressbar');
+// displaybtn.addEventListener('submit', (event) => console.log(event));
 
 
 

@@ -1,5 +1,6 @@
 
 const progressBarDisplay = (event) => {
+  const progressbar = document.getElementById('progressbar');
   if (progressbar.style.display == "none") {
     progressbar.style.display = "block";
     console.log('toto');
