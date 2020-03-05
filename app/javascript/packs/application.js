@@ -2,19 +2,26 @@ import "bootstrap";
 import * as ScanditSDK from "scandit-sdk";
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
-import { initMapbox } from '../plugins/init_mapbox';
+// import { initMapbox } from '../plugins/init_mapbox';
 import { openAdvancedSearch } from '../components/nav_search';
 import { openNavbar } from '../components/open_navbar';
 import { closeNavbar } from '../components/close_navbar';
 import { locateUser } from '../components/geocoding';
+import { progressBarDisplay } from '../components/progressbar';
 
 
-initMapbox();
+const displaybtn = document.querySelector(".progressbar-btn");
+const progressbar = document.getElementById('progressbar');
+displaybtn.addEventListener('submit', (event) => console.log(event));
+
+
+
+// initMapbox();
 openNavbar();
 closeNavbar();
 openAdvancedSearch();
 locateUser();
-
+// progressBarDisplay();
 
 ////////////////////////////////////////////////////////// SCAN JS
 
