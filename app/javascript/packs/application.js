@@ -7,6 +7,8 @@ import { openAdvancedSearch } from '../components/nav_search';
 import { openNavbar } from '../components/open_navbar';
 import { closeNavbar } from '../components/close_navbar';
 import { locateUser } from '../components/geocoding';
+import { displayProgressBar } from '../components/progressbar';
+import { displayProgressBarAdv } from '../components/progressbar-advanced';
 import { initSelect2 } from '../plugins/init_select2';
 
 initMapbox();
@@ -14,8 +16,9 @@ openNavbar();
 closeNavbar();
 openAdvancedSearch();
 locateUser();
+displayProgressBar();
+displayProgressBarAdv();
 initSelect2();
-
 
 ////////////////////////////////////////////////////////// SCAN JS
 

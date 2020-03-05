@@ -3,15 +3,20 @@
 </div>
 <div class="container">
   <div class="search-nav">
+    <div class="progressbar" id="progressbar">
+      <div></div>
+    </div>
     <div class="basic-search">
       <%= form_tag beers_path, method: :get do %>
-      <%= text_field_tag :name,
-        params[:name],
-        class: "form-control",
-        placeholder: "Quelle bière veux-tu rechercher ?"%>
+        <%= text_field_tag :name,
+          params[:name],
+          class: "form-control",
+          placeholder: "Quelle bière veux-tu rechercher ?"%>
     </div>
-      <%= submit_tag "go !", class: "submit-btn" %>
+        <%#= submit_tag "go !", onsubmit: "progressBarDisplay();", class: "submit-btn progressbar-btn" %>
+        <%= submit_tag "go !", class: "submit-btn progressbar-btn" %>
       <% end %>
+
     <div id="showbtn-search">
       <a href="#" class="showbtn">Recherche Avancée > </a>
     </div>
@@ -29,9 +34,9 @@
               <%#= number_field_tag 'price', nil, within: 1...10 %>
             </div> -->
           </div>
-            <%= submit_tag "GO !", class: "submit-btn" %>
-          <% end %>
         </div>
+            <%= submit_tag "GO !", class: "submit-btn progressbar-btn-adv" %>
+          <% end %>
     </div>
   </div>
 
