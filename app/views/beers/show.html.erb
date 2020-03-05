@@ -56,8 +56,12 @@
 
       <div class="detail-product">
         <h4><i class="fas fa-sun"></i> Note</h4>
-        <p><% @beer_rate.times do |i| %><i class="fas fa-beer"></i>
-        <% end %></p>
+        <% if @beer_rate == 0 %>
+          <p><em style="color: #CAD2D3;">Pas encore de note</em></p>
+        <% else %>
+          <p><% @beer_rate.times do |i| %><i class="fas fa-beer"></i>
+          <% end %></p>
+        <% end %>
       </div>
 
     </div>

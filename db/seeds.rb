@@ -30,7 +30,6 @@ b = Beer.create!(
     category: row['main_category'],
     barcode: row['code'],
     brewery: row['brands'],
-    description: row['main'],
     picture_url: row['image_front_url']
     )
 end

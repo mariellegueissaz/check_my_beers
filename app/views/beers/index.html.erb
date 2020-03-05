@@ -18,31 +18,31 @@
       <% end %>
 
     <div id="showbtn-search">
-      <a href="#" class="showbtn">recherches avancées > </a>
+      <a href="#" class="showbtn">Recherche Avancée > </a>
     </div>
     <div class="advanced-search" id="advanced-search">
 
-        <h4>Recherches avancées</h4>
+        <h4>Recherche Avancée</h4>
         <%= form_tag beers_path, method: :get do %>
         <div class="form-search">
           <div class="flex">
-            <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Select a type" %>
-            <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Select a brewery"%>
-            <%#= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Select a category"%>
-            <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Select a country" %>
+            <%= select_tag :beer_type, options_for_select(Beer::CATEGORIES.sort.uniq!), prompt: "Type de Bière", class: "type-select" %>
+            <%= select_tag :brewery, options_for_select(Beer::BREWERY.sort.uniq!), prompt: "Brasserie", class: "brewery-select" %>
+            <%= select_tag :category, options_for_select(Beer::MAIN.sort.uniq!), prompt: "Catégorie", class: "category-select"%>
+            <%= select_tag :location, options_for_select(Beer::LOCATION.sort.uniq!), prompt: "Pays", class: "location-select" %>
   <!--           <div class="price-range">
               <%#= number_field_tag 'price', nil, within: 1...10 %>
             </div> -->
           </div>
         </div>
-            <%= submit_tag "Search", class: "submit-btn progressbar-btn-adv" %>
+            <%= submit_tag "GO !", class: "submit-btn progressbar-btn-adv" %>
           <% end %>
     </div>
   </div>
 
   <div class="header-index-beers">
 
-    <h3>All beers</h3>
+    <h3>Toutes les Bières</h3>
     <p>(<%= @beers.length %>)</p>
 
   </div>
@@ -82,12 +82,3 @@
   <% end %>
   <%= render 'shared/footer' %>
 </div>
-
-
-
-
-
-
-
-
-
