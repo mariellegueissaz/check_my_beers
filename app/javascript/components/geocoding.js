@@ -1,7 +1,6 @@
 let locateUser = () => {
   const locate = document.querySelector('#user-location');
   if (locate != null ) {
-    console.log(locate);
     locate.addEventListener('click', (event) => {
       navigator.geolocation.getCurrentPosition((data) => {
           const lat = data.coords.latitude;

@@ -1,5 +1,5 @@
-let displayProgressBar = () => {
-  const displaybtn = document.querySelector(".progressbar-btn");
+let displayProgressBarAdv = () => {
+  const displaybtn = document.querySelector(".progressbar-btn-adv");
   if (displaybtn != null ) {
     displaybtn.addEventListener('click', () => {
       const progressbar = document.getElementById('progressbar');
@@ -8,4 +8,4 @@ let displayProgressBar = () => {
   }
 }
 
-export { displayProgressBar };
+export { displayProgressBarAdv };

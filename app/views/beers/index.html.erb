@@ -12,10 +12,10 @@
           params[:name],
           class: "form-control",
           placeholder: "Quelle bière veux-tu rechercher ?"%>
-        <%= submit_tag "go !", onsubmit: "progressBarDisplay();", class: "submit-btn progressbar-btn" %>
-      <% end %>
     </div>
-      <!-- <a href="#" class="progressbar-btn">hello</a> -->
+        <%#= submit_tag "go !", onsubmit: "progressBarDisplay();", class: "submit-btn progressbar-btn" %>
+        <%= submit_tag "go !", class: "submit-btn progressbar-btn" %>
+      <% end %>
 
     <div id="showbtn-search">
       <a href="#" class="showbtn">recherches avancées > </a>
@@ -35,7 +35,7 @@
             </div> -->
           </div>
         </div>
-            <%= submit_tag "Search", class: "submit-btn" %>
+            <%= submit_tag "Search", class: "submit-btn progressbar-btn-adv" %>
           <% end %>
     </div>
   </div>

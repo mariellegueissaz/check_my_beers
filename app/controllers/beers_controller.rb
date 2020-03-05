@@ -9,6 +9,7 @@ class BeersController < ApplicationController
       @beers = Beer.near([@lat, @lon], 200)
       @markers = @beers.map { |b| { lat: b.latitude, lng: b.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: b }), image_url: helpers.asset_url('beer_pin.png') } }
     elsif params[:name].present?
+      sleep(2)
       @div = true
       sql_query = " \
       name ILIKE :query \
@@ -16,6 +17,7 @@ class BeersController < ApplicationController
       @beers = Beer.where(sql_query, query: "%#{params[:name]}%")
       @markers = @beers.map { |b| { lat: b.latitude, lng: b.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: b }), image_url: helpers.asset_url('beer_pin.png') } }
     elsif params[:brewery].present? || params[:category].present? || params[:beer_type].present? || params[:location].present?
+      sleep(2)
       @div = true
       @beers = Beer.all
       @beers = @beers.where("brewery LIKE '%#{params[:brewery]}%'") if params[:brewery].present?

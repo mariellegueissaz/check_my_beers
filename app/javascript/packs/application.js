@@ -7,13 +7,8 @@ import { openAdvancedSearch } from '../components/nav_search';
 import { openNavbar } from '../components/open_navbar';
 import { closeNavbar } from '../components/close_navbar';
 import { locateUser } from '../components/geocoding';
-import { progressBarDisplay } from '../components/progressbar';
-
-
-// const displaybtn = document.querySelector(".progressbar-btn");
-// const progressbar = document.getElementById('progressbar');
-// displaybtn.addEventListener('submit', (event) => console.log(event));
-
+import { displayProgressBar } from '../components/progressbar';
+import { displayProgressBarAdv } from '../components/progressbar-advanced';
 
 
 // initMapbox();
@@ -21,7 +16,8 @@ openNavbar();
 closeNavbar();
 openAdvancedSearch();
 locateUser();
-// progressBarDisplay();
+displayProgressBar();
+displayProgressBarAdv();
 
 ////////////////////////////////////////////////////////// SCAN JS
 
