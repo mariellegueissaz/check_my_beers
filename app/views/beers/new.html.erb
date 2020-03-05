@@ -3,13 +3,13 @@
     <h3>Ajoute ta bière</h3>
     <%= simple_form_for @beer do |f| %>
       <%= f.input :barcode, :as => :hidden, :input_html => { :value => params[:barcode] } %>
-      <%= f.input :name, placeholder: 'Nom de la bière' %>
-      <%= f.input :beer_type, as: :select2, collection: Beer::CATEGORIES.sort.uniq!, prompt: 'Type' %>
-      <%= f.input :brewery, as: :select2, collection: Beer::BREWERY.sort.uniq!, prompt: 'Brasserie' %>
+      <%= f.input :name, label: 'Nom', placeholder: 'Nom de la bière' %>
+      <%= f.input :beer_type, label: 'Type de Bière', as: :select2, collection: Beer::CATEGORIES.sort.uniq!, prompt: 'Type' %>
+      <%= f.input :brewery, label: 'Brasserie', as: :select2, collection: Beer::BREWERY.sort.uniq!, prompt: 'Brasserie' %>
 <!--       <%#= f.input :price, placeholder: 'Enter the price' %> -->
-      <%= f.input :location, as: :select2, collection: Beer::LOCATION.sort.uniq!, prompt: 'Origine' %>
+      <%= f.input :location, label: "Pays d'origine", as: :select2, collection: Beer::LOCATION.sort.uniq!, prompt: 'Origine' %>
 <!--       <%#= f.input :category, collection: Beer::MAIN.sort.uniq!, prompt: 'Catégorie', class: "form-dropdown" %> -->
-      <%= f.input :degree, placeholder: "Taux d'alcool" %>
+      <%= f.input :degree, label: "Taux d'Alcool", placeholder: "Taux d'alcool" %>
 <!--       <%#= f.input :description, placeholder: 'Enter a description' %> -->
       <%= f.input :photo, as: :file %>
       <%= f.button :submit, value: 'Ajouter', class:'submit-btn' %>
