@@ -68,6 +68,10 @@ li {
   color: $mydark;
 }
 
+.form-control {
+  border: none;
+}
+
 
 /////////////////////////////////// SELECT 2
 
@@ -76,6 +80,12 @@ li {
 .select2-container{
     width: 140px !important;
     margin: 0 10px 10px 0 !important;
+    // display: block !important;
+    padding-left: 0 !important;
+}
+
+.select2-container li {
+  padding-top: 10px !important;
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
@@ -91,7 +101,8 @@ li {
     color: $mydark !important;
 }
 .select2-container .select2-choice {
-    border: 2px solid #dce4ec;
+    border: 2px solid $warm-yellow !important;
+    background: $white !important;
     height: 36px;
     border-radius: 0px ;
     font-size: 14px;
