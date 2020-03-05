@@ -5,12 +5,14 @@ class BeersController < ApplicationController
     if params[:lat].present?
       @lat = params[:lat]
       @lon = params[:lon]
-      @div = true
+      @div = false
+      @div1 = true
       @beers = Beer.near([@lat, @lon], 100)
       @markers = @beers.map { |b| { lat: b.latitude, lng: b.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: b }), image_url: helpers.asset_url('beer_pin.png') } }
     elsif params[:name].present?
       sleep(2)
       @div = true
+      @div1 = false
       sql_query = " \
       name ILIKE :query \
       "
@@ -27,6 +29,7 @@ class BeersController < ApplicationController
       @markers = @beers.map { |b| { lat: b.latitude, lng: b.longitude, infoWindow: render_to_string(partial: "info_window", locals: { beer: b }), image_url: helpers.asset_url('beer_pin.png') } }
     else
       @div = false
+      @div1 = false
       @beers = Beer.all
     end
   end
