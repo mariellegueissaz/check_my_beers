@@ -17,6 +17,9 @@ gem 'webpacker'
 gem 'devise'
 gem 'geocoder'
 gem 'cloudinary', '~> 1.12.0'
+gem 'jquery-rails'
+gem "select2-rails"
+gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
