@@ -58,6 +58,9 @@
   .flex {
     grid-column: 1;
   }
+  .select2-container {
+    display: inline-block !important;
+  }
 }
 
 .form-search .submit-btn {
@@ -80,7 +83,7 @@ li {
 .select2-container{
     width: 140px !important;
     margin: 0 10px 10px 0 !important;
-    // display: block !important;
+    display: block !important;
     padding-left: 0 !important;
 }
 
