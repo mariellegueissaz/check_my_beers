@@ -76,7 +76,7 @@
         <div class="review">
           <div class="header-review">
             <div class="author">
-              <p><i class="fas fa-user-circle"></i><%= link_to review.user.username, user_path(review.user.id) %></p>
+              <p><i class="fas fa-user-circle"></i><%= review.user.username %></p>
             </div>
             <div class="date">
               <p><%= review.created_at.strftime("%d-%m-%Y") %></p>
